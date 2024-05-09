@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h1 style="text-align: center; margin-top: 100px; font-size: 50px;">Welcome to My KingDom</h1>
+
+  <div class="flex justify-evenly">
+    <% data.forEach((data)=>{ %>
+        <div class="relative h-[400px] w-[300px] rounded-md">
+            <img
+              src="<%= data.image %>"
+              alt="AirMax Pro"
+              class="z-0 h-full w-full rounded-md object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-left">
+              <h1 class="text-lg font-semibold text-white"><%= data.name %></h1>
+              <p class="mt-2 text-sm text-gray-300">
+                <%= data.email %>
+              </p>
+              <button class="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-white">
+                View Profile →
+              </button>
+            </div>
+          </div>
+          
+  <%  }) %>
+  </div>
+</body>
+</html>

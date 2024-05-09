@@ -7,10 +7,13 @@
 </head>
 <body>
     <h1>Student registration Form</h1>
-    <form action="/api/" method="post">
-        <input type="text" name="name" placeholder="enter name"><br><br>
+    <form action="/api/" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="enter name"><br><br> 
         <input type="text" name="email" placeholder="enter email"><br><br>
         <input type="text" name="age" placeholder="enter age"><br><br>
+        <label for="img">Select image:</label>
+        <input type="file" id="img" name="image">
+        <br>
         <input type="text" name="password" placeholder="enter password"><br><br>
 
         <button type="submit">Submit</button>
